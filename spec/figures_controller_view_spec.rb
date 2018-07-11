@@ -56,7 +56,7 @@ describe FiguresController do
     figure = Figure.last
     title = Title.last
     expect(Figure.all.count).to eq(3)
-    expect(Title.all.count).to eq(1)
+    expect(Title.all.count).to eq(2)
     expect(figure.name).to eq("Doctor Who")
     expect(figure.titles).to include(title)
   end
@@ -69,7 +69,7 @@ describe FiguresController do
     figure = Figure.last
     landmark = Landmark.last
     expect(Figure.all.count).to eq(3)
-    expect(Landmark.all.count).to eq(1)
+    expect(Landmark.all.count).to eq(2)
     expect(figure.name).to eq("Doctor Who")
     expect(figure.landmarks).to include(landmark)
   end
