@@ -21,7 +21,7 @@ class FiguresController < ApplicationController
   end
 
   post '/figures' do
-    binding.pry
+    #binding.pry
     @figure = Figure.create(params[:figure])
     if params[:figure][:title_ids]
       params[:figure][:title_ids].each do |title_id|
