@@ -21,6 +21,7 @@ class FiguresController < ApplicationController
   end
 
   post '/figures' do
+    binding.pry
     @figure = Figure.create(params[:figure])
     params[:figure][:title_ids].each do |title_id|
       @figure.titles << Title.find(title_id)
